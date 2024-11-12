@@ -65,6 +65,8 @@ export class SnowflakeId {
     return Date.now();
   }
 
+  /* Auxiliares */
+
   public extractTimestamp(id: bigint): number {
     return Number((id >> BigInt(this.timestampLeftShift)) + BigInt(this.epoch));
   }
